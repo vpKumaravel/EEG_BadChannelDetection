@@ -1,6 +1,6 @@
 # eeg_bcd
 
-This repository contains code for the paper submitted to IEEE SPMB 2021 Symposium titled "Toward a domain-specific NN approach for EEG Bad Channel Detection".
+This repository contains code for the paper submitted to IEEE SPMB 2021 Symposium titled "Towards a domain-specific NN approach for EEG Bad Channel Detection".
 
 State-of-the-art traditional methods to detect and remove bad channels in scalp EEG using EEGLAB
 
