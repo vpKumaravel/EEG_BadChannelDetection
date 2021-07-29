@@ -30,7 +30,7 @@ for j = 1:numel(csv_files)
    ref_chan=find(strcmp({EEG.chanlocs.labels}, 'Cz'));
    
    list_properties = channel_properties(EEG, 1:EEG.nbchan, ref_chan); % run faster
-   FASTbadIdx=c(list_properties);
+   FASTbadIdx=min_z(list_properties);
    bad_pred=find(FASTbadIdx==1)';
 
    
