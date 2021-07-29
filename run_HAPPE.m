@@ -8,10 +8,10 @@
 clc
 clear all
 eeglab
+%%
+rootdir = '..\Sample Dataset'; % Use the absolute path where data and labels exist
 
-rootdir = 'C:\Google Drive\OpenNeuro\ds002034'; % root directory where all files from Open Neuro Website exist
-labeldir = 'C:\Google Drive\OpenNeuro\ds002034\label files'; % label of bad channels from .tsv files in the Open Neuro website (an example can be found in Sample Dataset Folder in this github repo)
-%mat files
+
 mat_files = dir(fullfile(rootdir, '**\*.set'));
 csv_files = dir(fullfile(rootdir, '**\*.csv'));
 
@@ -23,7 +23,7 @@ counter = 1;
 for j = 1:numel(csv_files)
 
    just_name = erase(csv_files(j).name,'_labels.csv');
-   labels = readtable([labeldir '\\' csv_files(j).name], 'ReadVariableNames', false);
+   labels = readtable([rootdir '\\' csv_files(j).name], 'ReadVariableNames', false);
    fprintf('\nCurrent Dataset ID %d:, %s\n', j, just_name);
    EEG = pop_loadset('filename',[just_name '_filtered.set'],'filepath',rootdir);
    EEG_tmp = EEG;

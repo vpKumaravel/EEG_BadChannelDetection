@@ -8,29 +8,24 @@ clc
 clear all
 eeglab
 %%
-rootdir = 'C:\Google Drive\OpenNeuro\ds002034'; % root directory where all files from Open Neuro Website exist
-labeldir = 'C:\Google Drive\OpenNeuro\ds002034\label files'; % label of bad channels from .tsv files in the Open Neuro website (an example can be found in Sample Dataset Folder in this github repo)
+rootdir = '...\Sample Dataset'; % Use the absolute path where data and labels exist
 
-%mat files
 mat_files = dir(fullfile(rootdir, '**\*.set'));
 csv_files = dir(fullfile(rootdir, '**\*.csv'));
 
-
 result_FASTER(length(csv_files)) = struct('name',"",'bad', [], 'F1',[],'BACC',[]); 
-
 counter = 1;
 
 for j = 1:numel(csv_files)
 
    just_name = erase(csv_files(j).name,'_labels.csv');
-   labels = readtable([labeldir '\\' csv_files(j).name], 'ReadVariableNames', false);
-   %fprintf('\nCurrent Dataset ID %d:, %s and total number of bad electrodes: %d \n', j, just_name, nnz(labels.Var1'));
+   labels = readtable([rootdir '\\' csv_files(j).name], 'ReadVariableNames', false);
    EEG = pop_loadset('filename',[just_name '_filtered.set'],'filepath',rootdir);
    
    ref_chan=find(strcmp({EEG.chanlocs.labels}, 'Cz'));
    
    list_properties = channel_properties(EEG, 1:EEG.nbchan, ref_chan); % run faster
-   FASTbadIdx=c(list_properties);
+   FASTbadIdx=min_z(list_properties);
    bad_pred=find(FASTbadIdx==1)';
 
    
