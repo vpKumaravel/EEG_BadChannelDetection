@@ -1,5 +1,7 @@
 __This repository contains the code for the paper submitted to IEEE SPMB 2021 Symposium titled "Towards a domain-specific NN approach for EEG Bad Channel Detection" (V.P. Kumaravel*, F. Paissan*, E. Farella)__
 
+__For the NN implementation, refer to https://github.com/fpaissan/cleanEEGNet__
+
 State-of-the-art traditional methods to detect and remove bad channels in scalp EEG using EEGLAB
 
 1) Kurtosis measure (2006)
@@ -18,8 +20,6 @@ _Use case: E.g., to run FASTER pipeline_
 * Execute the file
 * The results (balanced accuracy and f1 score) can be found in result_FASTER mat file
 
-
-For the NN implementation, refer to https://github.com/fpaissan/cleanEEGNet
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
