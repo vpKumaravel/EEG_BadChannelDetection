@@ -1,6 +1,6 @@
 # eeg_bcd
 
-This repository contains code for the paper submitted to IEEE SPMB 2021 Symposium titled "Towards a domain-specific NN approach for EEG Bad Channel Detection".
+This repository contains the code for the paper submitted to IEEE SPMB 2021 Symposium titled "Towards a domain-specific NN approach for EEG Bad Channel Detection" (V.P. Kumaravel*, F. Paissan*, E. Farella)
 
 State-of-the-art traditional methods to detect and remove bad channels in scalp EEG using EEGLAB
 
@@ -15,10 +15,10 @@ Software dependencies:
 
 Use case: E.g., to run FASTER pipeline
 
-a) Open run_FASTER.m
-b) Set the root location of data and label files
-c) Execute the file
-d) The results (balanced accuracy and f1 score) can be found in result_FASTER mat file
+* Open run_FASTER.m
+* Set the root location of data and label files
+* Execute the file
+ The results (balanced accuracy and f1 score) can be found in result_FASTER mat file
 
 
 For the NN implementation, refer to https://github.com/fpaissan/cleanEEGNet
