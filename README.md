@@ -1,6 +1,6 @@
 # eeg_bcd
 
-**This repository contains the code for the paper submitted to IEEE SPMB 2021 Symposium titled "Towards a domain-specific NN approach for EEG Bad Channel Detection" (V.P. Kumaravel*, F. Paissan*, E. Farella)**
+**This repository contains the code for the paper submitted to IEEE SPMB 2021 Symposium titled "Towards a domain-specific NN approach for EEG Bad Channel Detection" (V.P. Kumaravel*, F. Paissan*, E. Farella)
 
 State-of-the-art traditional methods to detect and remove bad channels in scalp EEG using EEGLAB
 
@@ -9,11 +9,11 @@ State-of-the-art traditional methods to detect and remove bad channels in scalp 
 3) ASR Clean_rawdata plugin (PREP-2015)
 4) HAPPE (2018)
 
-*Software dependencies:
+_Software dependencies:_
 1) EEGLAB: https://sccn.ucsd.edu/eeglab/download.php
 2) FASTER code implementation: https://sourceforge.net/projects/faster/
 
-*Use case: E.g., to run FASTER pipeline
+_Use case: E.g., to run FASTER pipeline_
 
 * Open run_FASTER.m
 * Set the root location of data and label files
