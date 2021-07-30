@@ -9,6 +9,18 @@ State-of-the-art traditional methods to detect and remove bad channels in scalp 
 3) ASR Clean_rawdata plugin (PREP-2015)
 4) HAPPE (2018)
 
+Software dependencies:
+1) EEGLAB: https://sccn.ucsd.edu/eeglab/download.php
+2) FASTER code implementation: https://sourceforge.net/projects/faster/
+
+Use case: E.g., to run FASTER pipeline
+
+a) Open run_FASTER.m
+b) Set the root location of data and label files
+c) Execute the file
+d) The results (balanced accuracy and f1 score) can be found in result_FASTER mat file
+
+
 For the NN implementation, refer to https://github.com/fpaissan/cleanEEGNet
 
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
