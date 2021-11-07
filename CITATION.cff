@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Kumaravel"
+  given-names: "Velu Prabhakar"
+- family-names: "Paissan"
+  given-names: "Francesco"
+- family-names: "Farella"
+  given-names: "Elisabetta"
+title: "EEG Bad Channel Detection"
+version: 1.0.0
+doi: 10.5281/zenodo.1234
+date-released: 2021-11-07
+url: "https://github.com/vpKumaravel/eeg_bcd"
