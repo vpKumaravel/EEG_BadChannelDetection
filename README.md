@@ -31,6 +31,10 @@ If you use this code, please cite the following publications:
 
 2. Kumaravel, V., Paissan, F. & Farella, E. Towards a domain-specific neural network approach for EEG bad channel detection. in 2021 IEEE Signal Processing in Medicine and Biology Symposium (SPMB) 1–4 (IEEE, 2021).
 
+## Important Update
+
+In our attempts to find a robust bad channel detection method, we adapted the LOF (Local Outlier Factor) to EEG for the first time and we found much improved performance compared to the existing approaches. The code is freely available as an EEGLAB plugin ([here](https://github.com/vpKumaravel/detectbadchannelLOF)) and also a part of MNE-Python preprocessing routine ([here](https://github.com/mne-tools/mne-python/blob/main/mne/preprocessing/_lof.py#L15-L99)).
+
 ## License
 This program is free software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the License, or (at your option) any later version.
 
